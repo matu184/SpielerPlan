@@ -1,0 +1,44 @@
+﻿@model List<Spieler>
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    <tr>
+        @Html.HiddenFor(m => Model[i].Id)
+        @Html.HiddenFor(m => Model[i].Über100)
+        @Html.HiddenFor(m => Model[i].Über140)
+        @Html.HiddenFor(m => Model[i].MaxFinish)
+        @Html.HiddenFor(m => Model[i].Anzahl180)
+        @Html.HiddenFor(m => Model[i].Schwarz)
+        <td>
+            @Html.DisplayFor(m => Model[i].SpielerNr)
+        </td>
+        <td>
+            @Html.DisplayFor(m => Model[i].Name)
+        </td>
+        <td>
+            @Html.DisplayFor(m => Model[i].Vorname)
+        </td>
+        <td>
+            @Html.CheckBoxFor(m => Model[i].Bezahlt1)
+        </td>
+        <td>
+            @Html.CheckBoxFor(m => Model[i].Über1001)
+        </td>
+        <td>
+            @Html.CheckBoxFor(m => Model[i].Über1401)
+        </td>
+        <td>
+            @Html.CheckBoxFor(m => Model[i].MaxFinish1)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => Model[i].HighFinish)
+        </td>
+        <td>
+            @Html.CheckBoxFor(m => Model[i].Anzahl1801)
+        <td>
+                @Html.CheckBoxFor(m => Model[i].Schwarz1)
+        </td>
+    </tr>
+}
+
+

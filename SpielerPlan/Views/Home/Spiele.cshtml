@@ -1,0 +1,57 @@
+﻿@model List<Spieler>
+
+<h3>Spieler Karte</h3>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Vorname</th>
+            <th>Gewonnen</th>
+            <th>Verloren</th>
+            <th>Sätze</th>
+            <th>Spiele</th>
+            <th>Gewinnquote</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var spieler in Model)
+        {
+            <tr>
+                @Html.DisplayFor(modelItem => spieler, "Spieler2")
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Spiele</h3>
+<br />
+<form asp-action="Dart" asp-controller="Home" method="post">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Vorname</th>
+                <th>Gewonnen</th>
+                <th>Verloren</th>
+                <th>Sätze</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @Html.EditorForModel("Spieler3")
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Dart" class="btn btn-primary" />
+</form>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+﻿@model SpielerPlan.Models.Spieler
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Spieler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SpielerNr" class="control-label"></label>
+                <input asp-for="SpielerNr" class="form-control" />
+                <span asp-validation-for="SpielerNr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vorname" class="control-label"></label>
+                <input asp-for="Vorname" class="form-control" />
+                <span asp-validation-for="Vorname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bezahlt" class="control-label"></label>
+                <input asp-for="Bezahlt" class="form-control" />
+                <span asp-validation-for="Bezahlt" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bezahlt1" /> @Html.DisplayNameFor(model => model.Bezahlt1)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Über100" class="control-label"></label>
+                <input asp-for="Über100" class="form-control" />
+                <span asp-validation-for="Über100" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Über1001" /> @Html.DisplayNameFor(model => model.Über1001)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Über140" class="control-label"></label>
+                <input asp-for="Über140" class="form-control" />
+                <span asp-validation-for="Über140" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Über1401" /> @Html.DisplayNameFor(model => model.Über1401)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxFinish" class="control-label"></label>
+                <input asp-for="MaxFinish" class="form-control" />
+                <span asp-validation-for="MaxFinish" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MaxFinish1" /> @Html.DisplayNameFor(model => model.MaxFinish1)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="HighFinish" class="control-label"></label>
+                <input asp-for="HighFinish" class="form-control" />
+                <span asp-validation-for="HighFinish" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anzahl180" class="control-label"></label>
+                <input asp-for="Anzahl180" class="form-control" />
+                <span asp-validation-for="Anzahl180" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Anzahl1801" /> @Html.DisplayNameFor(model => model.Anzahl1801)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Schwarz" class="control-label"></label>
+                <input asp-for="Schwarz" class="form-control" />
+                <span asp-validation-for="Schwarz" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Schwarz1" /> @Html.DisplayNameFor(model => model.Schwarz1)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

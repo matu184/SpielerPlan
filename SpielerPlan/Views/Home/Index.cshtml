@@ -1,0 +1,87 @@
+﻿@model List<Spieler>
+
+
+<h3>Scoreboard</h3>
+<form asp-action="Create">
+    <input type="submit" value="Neuer Teilnehmer" class="btn btn-primary" />
+</form>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>
+            Spieler Nummer
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Vorname
+        </th>
+        <th>
+            Spielgeld
+        </th>
+        <th>
+            Über 100
+        </th>
+        <th>
+            Über 140
+        </th>
+        <th>
+            Highfinish
+        </th>
+        <th>
+            Highfinish Score
+        </th>
+        <th>180</th>
+        <th>
+            Schwarz
+        </th>
+        <th>
+            Aktionen
+        </th>
+    </tr>
+    @Html.DisplayForModel()
+    </tr>
+
+</table>
+<h3>Statistik</h3>
+<form asp-action="Statistik" asp-controller="Home" method="post">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Spieler Nummer
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Vorname
+            </th>
+            <th>
+                Bezahlt
+            </th>
+            <th>
+                Über 100
+            </th>
+            <th>
+                Über 140
+            </th>
+            <th>
+                Max Finish
+            </th>
+            <th>
+                Highfinish
+            </th>
+            <th>
+                Anzahl 180
+            </th>
+            <th>
+                Schwarz
+            </th>
+        </tr>
+        @Html.EditorForModel("Spieler")
+    </table>
+    <input type="submit" value="Absenden" class="btn btn-primary" />
+</form>
+
+
